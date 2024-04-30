@@ -7,7 +7,7 @@ def index(request):
   categorias = CategoriaProducto.objects.all()
   productos = Producto.objects.filter(publico=True)
   
-  return render(request, 'mainapp/index.html', {
+  return render(request, 'mainapp/index.html', { 
     'titulo':'Home',
     'categorias':categorias,
     'productos':productos
